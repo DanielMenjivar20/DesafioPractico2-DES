@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HaUJICiZGDM=",
+  "dgSpecHash": "IkYvHHr5fpg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\dani2\\OneDrive\\Escritorio\\DesafioPractico2-DES\\LibrosAPI\\LibrosAPI.csproj",
+  "projectFilePath": "C:\\Users\\dani2\\OneDrive\\Documentos\\GitHub\\DesafioPractico2-DES\\LibrosAPI\\LibrosAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dani2\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\dani2\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

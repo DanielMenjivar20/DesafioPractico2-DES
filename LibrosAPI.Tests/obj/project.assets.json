@@ -8289,11 +8289,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dani2\\OneDrive\\Escritorio\\DesafioPractico2-DES\\LibrosAPI.Tests\\LibrosAPI.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\dani2\\OneDrive\\Documentos\\GitHub\\DesafioPractico2-DES\\LibrosAPI.Tests\\LibrosAPI.Tests.csproj",
       "projectName": "LibrosAPI.Tests",
-      "projectPath": "C:\\Users\\dani2\\OneDrive\\Escritorio\\DesafioPractico2-DES\\LibrosAPI.Tests\\LibrosAPI.Tests.csproj",
+      "projectPath": "C:\\Users\\dani2\\OneDrive\\Documentos\\GitHub\\DesafioPractico2-DES\\LibrosAPI.Tests\\LibrosAPI.Tests.csproj",
       "packagesPath": "C:\\Users\\dani2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dani2\\OneDrive\\Escritorio\\DesafioPractico2-DES\\LibrosAPI.Tests\\obj\\",
+      "outputPath": "C:\\Users\\dani2\\OneDrive\\Documentos\\GitHub\\DesafioPractico2-DES\\LibrosAPI.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -8315,8 +8315,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\dani2\\OneDrive\\Escritorio\\DesafioPractico2-DES\\LibrosAPI\\LibrosAPI.csproj": {
-              "projectPath": "C:\\Users\\dani2\\OneDrive\\Escritorio\\DesafioPractico2-DES\\LibrosAPI\\LibrosAPI.csproj"
+            "C:\\Users\\dani2\\OneDrive\\Documentos\\GitHub\\DesafioPractico2-DES\\LibrosAPI\\LibrosAPI.csproj": {
+              "projectPath": "C:\\Users\\dani2\\OneDrive\\Documentos\\GitHub\\DesafioPractico2-DES\\LibrosAPI\\LibrosAPI.csproj"
             }
           }
         }

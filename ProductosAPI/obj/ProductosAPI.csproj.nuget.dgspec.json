@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dani2\\OneDrive\\Escritorio\\DesafioPractico2-DES\\ProductosAPI\\ProductosAPI.csproj": {}
+    "C:\\Users\\dani2\\OneDrive\\Documentos\\GitHub\\DesafioPractico2-DES\\ProductosAPI\\ProductosAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dani2\\OneDrive\\Escritorio\\DesafioPractico2-DES\\ProductosAPI\\ProductosAPI.csproj": {
+    "C:\\Users\\dani2\\OneDrive\\Documentos\\GitHub\\DesafioPractico2-DES\\ProductosAPI\\ProductosAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dani2\\OneDrive\\Escritorio\\DesafioPractico2-DES\\ProductosAPI\\ProductosAPI.csproj",
+        "projectUniqueName": "C:\\Users\\dani2\\OneDrive\\Documentos\\GitHub\\DesafioPractico2-DES\\ProductosAPI\\ProductosAPI.csproj",
         "projectName": "ProductosAPI",
-        "projectPath": "C:\\Users\\dani2\\OneDrive\\Escritorio\\DesafioPractico2-DES\\ProductosAPI\\ProductosAPI.csproj",
+        "projectPath": "C:\\Users\\dani2\\OneDrive\\Documentos\\GitHub\\DesafioPractico2-DES\\ProductosAPI\\ProductosAPI.csproj",
         "packagesPath": "C:\\Users\\dani2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dani2\\OneDrive\\Escritorio\\DesafioPractico2-DES\\ProductosAPI\\obj\\",
+        "outputPath": "C:\\Users\\dani2\\OneDrive\\Documentos\\GitHub\\DesafioPractico2-DES\\ProductosAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
