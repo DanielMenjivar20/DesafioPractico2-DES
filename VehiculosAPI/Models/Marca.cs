@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+﻿using System.Text.Json.Serialization;
 
 namespace VehiculosAPI.Models
 {
@@ -6,7 +6,8 @@ namespace VehiculosAPI.Models
     {
         public int Id { get; set; }
         public string Nombre { get; set; } = string.Empty;
+
+        [JsonIgnore]
         public ICollection<Modelo> Modelos { get; set; } = new List<Modelo>();
     }
-
 }
