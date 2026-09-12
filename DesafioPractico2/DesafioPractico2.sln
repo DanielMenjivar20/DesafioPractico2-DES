@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductosAPI", "..\Producto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiculosAPI", "..\VehiculosAPI\VehiculosAPI.csproj", "{5DFD0979-8780-4BDD-AB99-27E4468AF839}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonasAPI", "PersonasAPI\PersonasAPI.csproj", "{E572FB42-1119-4C21-8B7C-AF20143BDDCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonasAPI.Tests", "PersonasAPI.Tests\PersonasAPI.Tests.csproj", "{5C4D6260-7063-4256-ADEC-84FB63FF7C17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{5DFD0979-8780-4BDD-AB99-27E4468AF839}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DFD0979-8780-4BDD-AB99-27E4468AF839}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DFD0979-8780-4BDD-AB99-27E4468AF839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E572FB42-1119-4C21-8B7C-AF20143BDDCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E572FB42-1119-4C21-8B7C-AF20143BDDCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E572FB42-1119-4C21-8B7C-AF20143BDDCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E572FB42-1119-4C21-8B7C-AF20143BDDCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C4D6260-7063-4256-ADEC-84FB63FF7C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C4D6260-7063-4256-ADEC-84FB63FF7C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C4D6260-7063-4256-ADEC-84FB63FF7C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C4D6260-7063-4256-ADEC-84FB63FF7C17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

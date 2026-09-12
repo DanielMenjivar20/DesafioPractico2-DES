@@ -90,11 +90,7 @@
             "UpstreamPathTemplate": "/libros",
             "UpstreamHttpMethod": [ "Get" ],
             "DownstreamHttpMethod": "Get",
-            "SwaggerKey": "Libros",
-            "FileCacheOptions": {
-                "ttlSeconds": 5,
-                "Region": "default"
-            }
+            "SwaggerKey": "Libros"
         },
         {
             "DownstreamPathTemplate": "/api/libros/{id}",
@@ -188,10 +184,6 @@
             "Period": "1m",
             "PeriodTimespan": 60,
             "Limit": 10
-        },
-        "FileCacheOptions": {
-            "ttlSeconds": 60,
-            "Region": "default"
         }
     }
 }
