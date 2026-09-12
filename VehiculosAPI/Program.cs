@@ -18,7 +18,14 @@ builder.Services.AddSwaggerGen();
 // 2. Configuración de Autenticación y Autorización
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication()
-    .AddCookie(IdentityConstants.ApplicationScheme);
+    .AddCookie(IdentityConstants.ApplicationScheme, options =>
+    {
+        options.Events.OnRedirectToLogin = context =>
+        {
+            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+            return Task.CompletedTask;
+        };
+    });
 
 builder.Services.AddIdentityCore<Usuario>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
