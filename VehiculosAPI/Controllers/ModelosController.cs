@@ -1,11 +1,13 @@
 ﻿namespace VehiculosAPI.Controllers
 {
+    using Microsoft.AspNetCore.Authorization; // <-- Asegúrate de incluir este using
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
     using VehiculosAPI.Models;
 
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize] // <-- NUEVO ATRIBUTO
     public class ModelosController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
