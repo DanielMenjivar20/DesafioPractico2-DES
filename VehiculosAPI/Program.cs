@@ -45,4 +45,11 @@ app.MapControllers();
 // 4. Mapeo de los endpoints de Identity para /register, /login, etc.
 app.MapIdentityApi<Usuario>();
 
+// Creación automática de la base de datos y tablas si no existen
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.EnsureCreated();
+}
+
 app.Run();
