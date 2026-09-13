@@ -1,0 +1,69 @@
+services:
+  # 1. CONTENEDOR DE LA BASE DE DATOS SQL SERVER
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver_db
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=PasswordSeguro123! 
+    ports:
+      - "1433:1433"
+
+  # 2. CONTENEDOR DE REDIS
+  redis:
+    image: redis:alpine
+    container_name: redis_cache
+    ports:
+      - "6379:6379"
+
+  # 3. API GATEWAY
+  apigateway:
+    build:
+      context: ../APIGateway
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" 
+    depends_on:
+      - librosapi
+      - productosapi
+      - personasapi
+      - vehiculosapi
+
+  # 4. TUS MICROSERVICIOS
+  librosapi:
+    build:
+      context: ../LibrosAPI
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=LibrosAPI;User Id=sa;Password=PasswordSeguro123!;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+
+  productosapi:
+    build:
+      context: ../ProductosAPI
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=ProductosAPI;User Id=sa;Password=PasswordSeguro123!;TrustServerCertificate=True;
+      - ConnectionStrings__RedisConnection=redis:6379
+    depends_on:
+      - sqlserver
+      - redis
+
+  personasapi:
+    build:
+      context: ./PersonasAPI
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=PersonasAPI;User Id=sa;Password=PasswordSeguro123!;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+
+  vehiculosapi:
+    build:
+      context: ../VehiculosAPI
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=VehiculosAPI;User Id=sa;Password=PasswordSeguro123!;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
