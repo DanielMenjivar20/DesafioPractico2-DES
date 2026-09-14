@@ -34,7 +34,14 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<ProductosDbContext>();
-    db.Database.Migrate();
+    try
+    {
+        db.Database.Migrate();
+    }
+    catch (Microsoft.Data.SqlClient.SqlException ex) when (ex.Number == 1801)
+    {
+        // La base de datos ya existe (carrera de tiempo con SQL Server al arrancar) - no es un error real
+    }
 }
 
 // Configure the HTTP request pipeline.

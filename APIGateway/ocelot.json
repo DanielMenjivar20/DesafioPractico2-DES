@@ -147,6 +147,252 @@
             "UpstreamHttpMethod": [ "Delete" ],
             "DownstreamHttpMethod": "Delete",
             "SwaggerKey": "Libros"
+        },
+        {
+            "DownstreamPathTemplate": "/api/vehiculos",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/vehiculos",
+            "UpstreamHttpMethod": [ "Get" ],
+            "DownstreamHttpMethod": "Get",
+            "SwaggerKey": "Vehiculos",
+            "RateLimitOptions": {
+                "ClientIdHeader": "ClientId",
+                "ClientWhitelist": [],
+                "EnableRateLimiting": true,
+                "Period": "1m",
+                "PeriodTimespan": 60,
+                "Limit": 10
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/vehiculos/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/vehiculos/{id}",
+            "UpstreamHttpMethod": [ "Get" ],
+            "DownstreamHttpMethod": "Get",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/api/vehiculos",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/vehiculos",
+            "UpstreamHttpMethod": [ "Post" ],
+            "DownstreamHttpMethod": "Post",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/api/vehiculos/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/vehiculos/{id}",
+            "UpstreamHttpMethod": [ "Put" ],
+            "DownstreamHttpMethod": "Put",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/api/vehiculos/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/vehiculos/{id}",
+            "UpstreamHttpMethod": [ "Delete" ],
+            "DownstreamHttpMethod": "Delete",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/api/modelos",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/modelos",
+            "UpstreamHttpMethod": [ "Get" ],
+            "DownstreamHttpMethod": "Get",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/api/modelos/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/modelos/{id}",
+            "UpstreamHttpMethod": [ "Get" ],
+            "DownstreamHttpMethod": "Get",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/api/modelos",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/modelos",
+            "UpstreamHttpMethod": [ "Post" ],
+            "DownstreamHttpMethod": "Post",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/api/modelos/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/modelos/{id}",
+            "UpstreamHttpMethod": [ "Put" ],
+            "DownstreamHttpMethod": "Put",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/api/modelos/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/modelos/{id}",
+            "UpstreamHttpMethod": [ "Delete" ],
+            "DownstreamHttpMethod": "Delete",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/api/marcas",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/marcas",
+            "UpstreamHttpMethod": [ "Get" ],
+            "DownstreamHttpMethod": "Get",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/api/marcas/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/marcas/{id}",
+            "UpstreamHttpMethod": [ "Get" ],
+            "DownstreamHttpMethod": "Get",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/api/marcas",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/marcas",
+            "UpstreamHttpMethod": [ "Post" ],
+            "DownstreamHttpMethod": "Post",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/api/marcas/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/marcas/{id}",
+            "UpstreamHttpMethod": [ "Put" ],
+            "DownstreamHttpMethod": "Put",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/api/marcas/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/marcas/{id}",
+            "UpstreamHttpMethod": [ "Delete" ],
+            "DownstreamHttpMethod": "Delete",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/register",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/register",
+            "UpstreamHttpMethod": [ "Post" ],
+            "DownstreamHttpMethod": "Post",
+            "SwaggerKey": "Vehiculos"
+        },
+        {
+            "DownstreamPathTemplate": "/login",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "vehiculosapi",
+                    "Port": 8080
+                }
+            ],
+            "UpstreamPathTemplate": "/login",
+            "UpstreamHttpMethod": [ "Post" ],
+            "DownstreamHttpMethod": "Post",
+            "SwaggerKey": "Vehiculos"
         }
     ],
     "GlobalConfiguration": {
@@ -171,6 +417,18 @@
                         "Name": "Libros API",
                         "Scheme": "http",
                         "Host": "librosapi",
+                        "Port": 8080,
+                        "Path": "/swagger/v1/swagger.json"
+                    }
+                ]
+            },
+            {
+                "Key": "Vehiculos",
+                "Config": [
+                    {
+                        "Name": "Vehiculos API",
+                        "Scheme": "http",
+                        "Host": "vehiculosapi",
                         "Port": 8080,
                         "Path": "/swagger/v1/swagger.json"
                     }

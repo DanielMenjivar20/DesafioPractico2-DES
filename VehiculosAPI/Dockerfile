@@ -10,5 +10,6 @@ RUN dotnet publish "./VehiculosAPI.csproj" -c Release -o /app/publish /p:UseAppH
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS final
 WORKDIR /app
+RUN apk add --no-cache icu-libs
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "VehiculosAPI.dll"]

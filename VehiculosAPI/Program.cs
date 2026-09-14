@@ -33,6 +33,20 @@ builder.Services.AddIdentityCore<Usuario>()
 
 var app = builder.Build();
 
+// APLICAR MIGRACIONES AUTOMATICAMENTE AL ARRANCAR
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    try
+    {
+        db.Database.Migrate();
+    }
+    catch (Microsoft.Data.SqlClient.SqlException ex) when (ex.Number == 1801)
+    {
+        // La base de datos ya existe (carrera de tiempo con SQL Server al arrancar) - no es un error real
+    }
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

@@ -42,7 +42,7 @@ namespace ProductosAPI.Controllers
 
             var productos = await _context.Productos.AsNoTracking().ToListAsync();
 
-            await dbRedis.StringSetAsync(cacheKey, JsonSerializer.Serialize(productos), TimeSpan.FromMinutes(10));
+            await dbRedis.StringSetAsync(cacheKey, JsonSerializer.Serialize(productos), TimeSpan.FromMinutes(5));
 
             return Ok(productos);
         }
@@ -72,7 +72,7 @@ namespace ProductosAPI.Controllers
                 return NotFound();
             }
 
-            await dbRedis.StringSetAsync(cacheKey, JsonSerializer.Serialize(producto), TimeSpan.FromMinutes(10));
+            await dbRedis.StringSetAsync(cacheKey, JsonSerializer.Serialize(producto), TimeSpan.FromMinutes(5));
 
             return producto;
         }

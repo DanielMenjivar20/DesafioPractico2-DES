@@ -40,7 +40,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
+      - DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true
       - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=LibrosAPI;User Id=sa;Password=PasswordSeguro123!;TrustServerCertificate=True;
     depends_on:
       - sqlserver
