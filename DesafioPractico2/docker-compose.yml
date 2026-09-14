@@ -1,5 +1,7 @@
+version: '3.8'
+
 services:
-  # 1. CONTENEDOR DE LA BASE DE DATOS SQL SERVER
+  # 1. BASE DE DATOS SQL SERVER
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: sqlserver_db
@@ -8,8 +10,10 @@ services:
       - SA_PASSWORD=PasswordSeguro123! 
     ports:
       - "1433:1433"
+    volumes:
+      - sql-data:/var/opt/mssql
 
-  # 2. CONTENEDOR DE REDIS
+  # 2. REDIS
   redis:
     image: redis:alpine
     container_name: redis_cache
@@ -22,19 +26,21 @@ services:
       context: ../APIGateway
       dockerfile: Dockerfile
     ports:
-      - "8080:80" 
+      - "8080:8080" 
     depends_on:
       - librosapi
       - productosapi
       - personasapi
       - vehiculosapi
 
-  # 4. TUS MICROSERVICIOS
+  # 4. MICROSERVICIOS
   librosapi:
     build:
       context: ../LibrosAPI
       dockerfile: Dockerfile
     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
       - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=LibrosAPI;User Id=sa;Password=PasswordSeguro123!;TrustServerCertificate=True;
     depends_on:
       - sqlserver
@@ -44,6 +50,8 @@ services:
       context: ../ProductosAPI
       dockerfile: Dockerfile
     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
       - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=ProductosAPI;User Id=sa;Password=PasswordSeguro123!;TrustServerCertificate=True;
       - ConnectionStrings__RedisConnection=redis:6379
     depends_on:
@@ -55,6 +63,8 @@ services:
       context: ./PersonasAPI
       dockerfile: Dockerfile
     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
       - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=PersonasAPI;User Id=sa;Password=PasswordSeguro123!;TrustServerCertificate=True;
     depends_on:
       - sqlserver
@@ -64,6 +74,11 @@ services:
       context: ../VehiculosAPI
       dockerfile: Dockerfile
     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
       - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=VehiculosAPI;User Id=sa;Password=PasswordSeguro123!;TrustServerCertificate=True;
     depends_on:
       - sqlserver
+
+volumes:
+  sql-data:

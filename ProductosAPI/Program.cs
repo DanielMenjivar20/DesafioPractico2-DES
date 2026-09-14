@@ -30,6 +30,13 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// APLICAR MIGRACIONES AUTOMATICAMENTE AL ARRANCAR
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ProductosDbContext>();
+    db.Database.Migrate();
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
